@@ -13,6 +13,8 @@
 		09A0DC681A8E4371007CA876 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A0DC671A8E4371007CA876 /* Images.xcassets */; };
 		09A0DC6B1A8E4371007CA876 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A0DC691A8E4371007CA876 /* LaunchScreen.xib */; };
 		09A0DC771A8E4371007CA876 /* FitTodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A0DC761A8E4371007CA876 /* FitTodayTests.swift */; };
+		09A0DC811A8E49C3007CA876 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A0DC801A8E49C3007CA876 /* OAuthSwift.framework */; };
+		09A0DC821A8E49C3007CA876 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09A0DC801A8E49C3007CA876 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		09A0DC831A8E49C3007CA876 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				09A0DC821A8E49C3007CA876 /* OAuthSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		09A0DC5B1A8E4371007CA876 /* FitToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A0DC5F1A8E4371007CA876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +52,7 @@
 		09A0DC701A8E4371007CA876 /* FitTodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitTodayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A0DC751A8E4371007CA876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09A0DC761A8E4371007CA876 /* FitTodayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitTodayTests.swift; sourceTree = "<group>"; };
+		09A0DC801A8E49C3007CA876 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09A0DC811A8E49C3007CA876 /* OAuthSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +77,7 @@
 		09A0DC521A8E4371007CA876 = {
 			isa = PBXGroup;
 			children = (
+				09A0DC801A8E49C3007CA876 /* OAuthSwift.framework */,
 				09A0DC5D1A8E4371007CA876 /* FitToday */,
 				09A0DC731A8E4371007CA876 /* FitTodayTests */,
 				09A0DC5C1A8E4371007CA876 /* Products */,
@@ -122,6 +141,7 @@
 				09A0DC571A8E4371007CA876 /* Sources */,
 				09A0DC581A8E4371007CA876 /* Frameworks */,
 				09A0DC591A8E4371007CA876 /* Resources */,
+				09A0DC831A8E49C3007CA876 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -336,6 +356,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FitToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +370,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = FitToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

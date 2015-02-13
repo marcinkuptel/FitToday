@@ -42,6 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		098F96F41A8E768400421655 /* FitToday-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitToday-Bridging-Header.h"; sourceTree = "<group>"; };
 		09A0DC5B1A8E4371007CA876 /* FitToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A0DC5F1A8E4371007CA876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09A0DC601A8E4371007CA876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +103,7 @@
 				09A0DC671A8E4371007CA876 /* Images.xcassets */,
 				09A0DC691A8E4371007CA876 /* LaunchScreen.xib */,
 				09A0DC5E1A8E4371007CA876 /* Supporting Files */,
+				098F96F41A8E768400421655 /* FitToday-Bridging-Header.h */,
 			);
 			path = FitToday;
 			sourceTree = "<group>";
@@ -363,6 +365,7 @@
 				INFOPLIST_FILE = FitToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/FitToday/FitToday-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -377,6 +380,7 @@
 				INFOPLIST_FILE = FitToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/FitToday/FitToday-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -433,6 +437,7 @@
 				09A0DC7C1A8E4371007CA876 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		09A0DC7D1A8E4371007CA876 /* Build configuration list for PBXNativeTarget "FitTodayTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +446,7 @@
 				09A0DC7F1A8E4371007CA876 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -42,18 +42,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		098F96F41A8E768400421655 /* FitToday-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FitToday-Bridging-Header.h"; sourceTree = "<group>"; };
+		098F96F41A8E768400421655 /* FitToday-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FitToday-Bridging-Header.h"; path = "Source/FitToday-Bridging-Header.h"; sourceTree = "<group>"; };
 		09A0DC5B1A8E4371007CA876 /* FitToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A0DC5F1A8E4371007CA876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09A0DC601A8E4371007CA876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		09A0DC621A8E4371007CA876 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09A0DC601A8E4371007CA876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Source/AppDelegate.swift; sourceTree = "<group>"; };
+		09A0DC621A8E4371007CA876 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Source/ViewController.swift; sourceTree = "<group>"; };
 		09A0DC651A8E4371007CA876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09A0DC671A8E4371007CA876 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		09A0DC6A1A8E4371007CA876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		09A0DC701A8E4371007CA876 /* FitTodayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitTodayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A0DC751A8E4371007CA876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09A0DC761A8E4371007CA876 /* FitTodayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitTodayTests.swift; sourceTree = "<group>"; };
-		09A0DC801A8E49C3007CA876 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
+		09A0DC801A8E49C3007CA876 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = ../Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +75,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09A0DC521A8E4371007CA876 = {
+		093846811A8F7654005BD244 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				09A0DC801A8E49C3007CA876 /* OAuthSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09A0DC521A8E4371007CA876 = {
+			isa = PBXGroup;
+			children = (
 				09A0DC5D1A8E4371007CA876 /* FitToday */,
 				09A0DC731A8E4371007CA876 /* FitTodayTests */,
 				09A0DC5C1A8E4371007CA876 /* Products */,
@@ -97,13 +104,14 @@
 		09A0DC5D1A8E4371007CA876 /* FitToday */ = {
 			isa = PBXGroup;
 			children = (
+				093846811A8F7654005BD244 /* Frameworks */,
 				09A0DC601A8E4371007CA876 /* AppDelegate.swift */,
+				098F96F41A8E768400421655 /* FitToday-Bridging-Header.h */,
 				09A0DC621A8E4371007CA876 /* ViewController.swift */,
 				09A0DC641A8E4371007CA876 /* Main.storyboard */,
 				09A0DC671A8E4371007CA876 /* Images.xcassets */,
 				09A0DC691A8E4371007CA876 /* LaunchScreen.xib */,
 				09A0DC5E1A8E4371007CA876 /* Supporting Files */,
-				098F96F41A8E768400421655 /* FitToday-Bridging-Header.h */,
 			);
 			path = FitToday;
 			sourceTree = "<group>";

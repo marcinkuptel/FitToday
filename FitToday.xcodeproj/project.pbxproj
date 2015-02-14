@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093846841A8F77BB005BD244 /* FitBitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093846831A8F77BB005BD244 /* FitBitClient.swift */; };
+		093846861A8F77FD005BD244 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093846851A8F77FD005BD244 /* HMAC.swift */; };
 		09A0DC611A8E4371007CA876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A0DC601A8E4371007CA876 /* AppDelegate.swift */; };
 		09A0DC631A8E4371007CA876 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A0DC621A8E4371007CA876 /* ViewController.swift */; };
 		09A0DC661A8E4371007CA876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A0DC641A8E4371007CA876 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		093846831A8F77BB005BD244 /* FitBitClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FitBitClient.swift; path = "Source/FitBit client/FitBitClient.swift"; sourceTree = "<group>"; };
+		093846851A8F77FD005BD244 /* HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = "Source/FitBit client/HMAC.swift"; sourceTree = "<group>"; };
 		098F96F41A8E768400421655 /* FitToday-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FitToday-Bridging-Header.h"; path = "Source/FitToday-Bridging-Header.h"; sourceTree = "<group>"; };
 		09A0DC5B1A8E4371007CA876 /* FitToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A0DC5F1A8E4371007CA876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +87,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		093846821A8F772D005BD244 /* FitBit client */ = {
+			isa = PBXGroup;
+			children = (
+				093846831A8F77BB005BD244 /* FitBitClient.swift */,
+				093846851A8F77FD005BD244 /* HMAC.swift */,
+			);
+			name = "FitBit client";
+			sourceTree = "<group>";
+		};
 		09A0DC521A8E4371007CA876 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +117,7 @@
 		09A0DC5D1A8E4371007CA876 /* FitToday */ = {
 			isa = PBXGroup;
 			children = (
+				093846821A8F772D005BD244 /* FitBit client */,
 				093846811A8F7654005BD244 /* Frameworks */,
 				09A0DC601A8E4371007CA876 /* AppDelegate.swift */,
 				098F96F41A8E768400421655 /* FitToday-Bridging-Header.h */,
@@ -242,7 +256,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093846841A8F77BB005BD244 /* FitBitClient.swift in Sources */,
 				09A0DC631A8E4371007CA876 /* ViewController.swift in Sources */,
+				093846861A8F77FD005BD244 /* HMAC.swift in Sources */,
 				09A0DC611A8E4371007CA876 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,7 +389,7 @@
 				INFOPLIST_FILE = FitToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/FitToday/FitToday-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/FitToday/Source/FitToday-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -388,7 +404,7 @@
 				INFOPLIST_FILE = FitToday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/FitToday/FitToday-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/FitToday/Source/FitToday-Bridging-Header.h";
 			};
 			name = Release;
 		};

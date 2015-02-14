@@ -10,6 +10,9 @@
 		093846841A8F77BB005BD244 /* FitBitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093846831A8F77BB005BD244 /* FitBitClient.swift */; };
 		093846861A8F77FD005BD244 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093846851A8F77FD005BD244 /* HMAC.swift */; };
 		093846881A8F81F3005BD244 /* OAuthTokenKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093846871A8F81F3005BD244 /* OAuthTokenKeeper.swift */; };
+		0938468A1A8F8E02005BD244 /* OAuthConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093846891A8F8E02005BD244 /* OAuthConstants.swift */; };
+		0938468C1A8F93CB005BD244 /* FitBitEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0938468B1A8F93CB005BD244 /* FitBitEndpoints.swift */; };
+		0938468E1A8F968A005BD244 /* FitBitRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0938468D1A8F968A005BD244 /* FitBitRequestBuilder.swift */; };
 		09A0DC611A8E4371007CA876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A0DC601A8E4371007CA876 /* AppDelegate.swift */; };
 		09A0DC631A8E4371007CA876 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A0DC621A8E4371007CA876 /* ViewController.swift */; };
 		09A0DC661A8E4371007CA876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A0DC641A8E4371007CA876 /* Main.storyboard */; };
@@ -48,6 +51,9 @@
 		093846831A8F77BB005BD244 /* FitBitClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FitBitClient.swift; path = "Source/FitBit client/FitBitClient.swift"; sourceTree = "<group>"; };
 		093846851A8F77FD005BD244 /* HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = "Source/FitBit client/HMAC.swift"; sourceTree = "<group>"; };
 		093846871A8F81F3005BD244 /* OAuthTokenKeeper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OAuthTokenKeeper.swift; path = "Source/FitBit client/OAuthTokenKeeper.swift"; sourceTree = "<group>"; };
+		093846891A8F8E02005BD244 /* OAuthConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OAuthConstants.swift; path = "Source/FitBit client/OAuthConstants.swift"; sourceTree = "<group>"; };
+		0938468B1A8F93CB005BD244 /* FitBitEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FitBitEndpoints.swift; path = "Source/FitBit client/FitBitEndpoints.swift"; sourceTree = "<group>"; };
+		0938468D1A8F968A005BD244 /* FitBitRequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FitBitRequestBuilder.swift; path = "Source/FitBit client/FitBitRequestBuilder.swift"; sourceTree = "<group>"; };
 		098F96F41A8E768400421655 /* FitToday-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FitToday-Bridging-Header.h"; path = "Source/FitToday-Bridging-Header.h"; sourceTree = "<group>"; };
 		09A0DC5B1A8E4371007CA876 /* FitToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A0DC5F1A8E4371007CA876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +101,9 @@
 				093846871A8F81F3005BD244 /* OAuthTokenKeeper.swift */,
 				093846831A8F77BB005BD244 /* FitBitClient.swift */,
 				093846851A8F77FD005BD244 /* HMAC.swift */,
+				093846891A8F8E02005BD244 /* OAuthConstants.swift */,
+				0938468B1A8F93CB005BD244 /* FitBitEndpoints.swift */,
+				0938468D1A8F968A005BD244 /* FitBitRequestBuilder.swift */,
 			);
 			name = "FitBit client";
 			sourceTree = "<group>";
@@ -262,8 +271,11 @@
 				093846841A8F77BB005BD244 /* FitBitClient.swift in Sources */,
 				09A0DC631A8E4371007CA876 /* ViewController.swift in Sources */,
 				093846881A8F81F3005BD244 /* OAuthTokenKeeper.swift in Sources */,
+				0938468A1A8F8E02005BD244 /* OAuthConstants.swift in Sources */,
+				0938468C1A8F93CB005BD244 /* FitBitEndpoints.swift in Sources */,
 				093846861A8F77FD005BD244 /* HMAC.swift in Sources */,
 				09A0DC611A8E4371007CA876 /* AppDelegate.swift in Sources */,
+				0938468E1A8F968A005BD244 /* FitBitRequestBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,4 +36,9 @@ class OAuthTokenKeeper: NSObject {
     {
         return NSUserDefaults.standardUserDefaults().objectForKey(TOKEN_SECRET_KEY) as String?
     }
+    
+    func authorized() -> Bool
+    {
+        return (self.oauthToken() != nil && self.oauthTokenSecret() != nil)
+    }
 }

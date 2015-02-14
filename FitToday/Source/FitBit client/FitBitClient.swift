@@ -10,4 +10,25 @@ import Foundation
 
 class FitBitClient: NSObject {
 
+    let tokenKeeper: OAuthTokenKeeper
+    
+    init(tokenKeeper: OAuthTokenKeeper) {
+        self.tokenKeeper = tokenKeeper
+    }
+    
+    func getUserInfo() -> Void
+    {
+        let request = FitBitRequestBuilder.getUserInfoRequest(self.tokenKeeper)
+        let session = NSURLSession.sharedSession()
+        
+        let completion = {
+            (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
+            let response = NSString(data: data, encoding: NSUTF8StringEncoding)
+            println(response)
+        }
+        
+        var task = session.dataTaskWithRequest(request, completionHandler: completion)
+        task.resume()
+    }
+    
 }

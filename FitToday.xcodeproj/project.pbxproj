@@ -21,6 +21,8 @@
 		09A0DC771A8E4371007CA876 /* FitTodayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A0DC761A8E4371007CA876 /* FitTodayTests.swift */; };
 		09A0DC811A8E49C3007CA876 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A0DC801A8E49C3007CA876 /* OAuthSwift.framework */; };
 		09A0DC821A8E49C3007CA876 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09A0DC801A8E49C3007CA876 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		09B36EC81A910BC900F92610 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B36EC71A910BC900F92610 /* HTTPResponse.swift */; };
+		09B36ECA1A910BE000F92610 /* GetUserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B36EC91A910BE000F92610 /* GetUserInfoResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		09A0DC751A8E4371007CA876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09A0DC761A8E4371007CA876 /* FitTodayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitTodayTests.swift; sourceTree = "<group>"; };
 		09A0DC801A8E49C3007CA876 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = ../Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
+		09B36EC71A910BC900F92610 /* HTTPResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPResponse.swift; path = "Source/FitBit client/HTTP responses/HTTPResponse.swift"; sourceTree = "<group>"; };
+		09B36EC91A910BE000F92610 /* GetUserInfoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetUserInfoResponse.swift; path = "Source/FitBit client/HTTP responses/GetUserInfoResponse.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		093846821A8F772D005BD244 /* FitBit client */ = {
 			isa = PBXGroup;
 			children = (
+				09B36EC61A910B7E00F92610 /* HTTP responses */,
 				093846871A8F81F3005BD244 /* OAuthTokenKeeper.swift */,
 				093846831A8F77BB005BD244 /* FitBitClient.swift */,
 				093846851A8F77FD005BD244 /* HMAC.swift */,
@@ -165,6 +170,15 @@
 				09A0DC751A8E4371007CA876 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09B36EC61A910B7E00F92610 /* HTTP responses */ = {
+			isa = PBXGroup;
+			children = (
+				09B36EC71A910BC900F92610 /* HTTPResponse.swift */,
+				09B36EC91A910BE000F92610 /* GetUserInfoResponse.swift */,
+			);
+			name = "HTTP responses";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +288,8 @@
 				0938468A1A8F8E02005BD244 /* OAuthConstants.swift in Sources */,
 				0938468C1A8F93CB005BD244 /* FitBitEndpoints.swift in Sources */,
 				093846861A8F77FD005BD244 /* HMAC.swift in Sources */,
+				09B36ECA1A910BE000F92610 /* GetUserInfoResponse.swift in Sources */,
+				09B36EC81A910BC900F92610 /* HTTPResponse.swift in Sources */,
 				09A0DC611A8E4371007CA876 /* AppDelegate.swift in Sources */,
 				0938468E1A8F968A005BD244 /* FitBitRequestBuilder.swift in Sources */,
 			);

@@ -10,7 +10,7 @@ import Foundation
 
 class FitBitClient: NSObject {
 
-    let tokenKeeper: OAuthTokenKeeper
+    private let tokenKeeper: OAuthTokenKeeper
     
     init(tokenKeeper: OAuthTokenKeeper) {
         self.tokenKeeper = tokenKeeper
@@ -23,8 +23,11 @@ class FitBitClient: NSObject {
         
         let completion = {
             (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
-            let response = NSString(data: data, encoding: NSUTF8StringEncoding)
-            println(response)
+            let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
+            if responseString != nil {
+                let responseObject = GetUserInfoResponse(response: responseString!)
+                println(responseObject?.fullName)
+            }
         }
         
         var task = session.dataTaskWithRequest(request, completionHandler: completion)

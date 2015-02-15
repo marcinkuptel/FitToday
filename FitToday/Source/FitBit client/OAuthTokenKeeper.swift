@@ -10,8 +10,8 @@ import Foundation
 
 class OAuthTokenKeeper: NSObject {
 
-    let TOKEN_KEY = "token"
-    let TOKEN_SECRET_KEY = "tokenSecret"
+    private let TOKEN_KEY = "token"
+    private let TOKEN_SECRET_KEY = "tokenSecret"
     
     /**
     Method saving token and token secret to NSUserDefaults.

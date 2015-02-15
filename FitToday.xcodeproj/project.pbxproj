@@ -23,6 +23,10 @@
 		09A0DC821A8E49C3007CA876 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09A0DC801A8E49C3007CA876 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09B36EC81A910BC900F92610 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B36EC71A910BC900F92610 /* HTTPResponse.swift */; };
 		09B36ECA1A910BE000F92610 /* GetUserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B36EC91A910BE000F92610 /* GetUserInfoResponse.swift */; };
+		09B36ED21A9116A000F92610 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09B36ED11A9116A000F92610 /* NotificationCenter.framework */; };
+		09B36ED71A9116A000F92610 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B36ED61A9116A000F92610 /* TodayViewController.swift */; };
+		09B36ED91A9116A000F92610 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B36ED81A9116A000F92610 /* MainInterface.storyboard */; };
+		09B36EDC1A9116A000F92610 /* FitToday Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 09B36ECF1A9116A000F92610 /* FitToday Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +36,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 09A0DC5A1A8E4371007CA876;
 			remoteInfo = FitToday;
+		};
+		09B36EDA1A9116A000F92610 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09A0DC531A8E4371007CA876 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09B36ECE1A9116A000F92610;
+			remoteInfo = "FitToday Widget";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -45,6 +56,17 @@
 				09A0DC821A8E49C3007CA876 /* OAuthSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09B36EE01A9116A000F92610 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				09B36EDC1A9116A000F92610 /* FitToday Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -70,6 +92,11 @@
 		09A0DC801A8E49C3007CA876 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = ../Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
 		09B36EC71A910BC900F92610 /* HTTPResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HTTPResponse.swift; path = "Source/FitBit client/HTTP responses/HTTPResponse.swift"; sourceTree = "<group>"; };
 		09B36EC91A910BE000F92610 /* GetUserInfoResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetUserInfoResponse.swift; path = "Source/FitBit client/HTTP responses/GetUserInfoResponse.swift"; sourceTree = "<group>"; };
+		09B36ECF1A9116A000F92610 /* FitToday Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FitToday Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09B36ED11A9116A000F92610 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		09B36ED51A9116A000F92610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09B36ED61A9116A000F92610 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		09B36ED81A9116A000F92610 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +112,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09B36ECC1A9116A000F92610 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B36ED21A9116A000F92610 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +153,8 @@
 			children = (
 				09A0DC5D1A8E4371007CA876 /* FitToday */,
 				09A0DC731A8E4371007CA876 /* FitTodayTests */,
+				09B36ED31A9116A000F92610 /* FitToday Widget */,
+				09B36ED01A9116A000F92610 /* Frameworks */,
 				09A0DC5C1A8E4371007CA876 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,6 +164,7 @@
 			children = (
 				09A0DC5B1A8E4371007CA876 /* FitToday.app */,
 				09A0DC701A8E4371007CA876 /* FitTodayTests.xctest */,
+				09B36ECF1A9116A000F92610 /* FitToday Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,6 +219,32 @@
 			name = "HTTP responses";
 			sourceTree = "<group>";
 		};
+		09B36ED01A9116A000F92610 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				09B36ED11A9116A000F92610 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		09B36ED31A9116A000F92610 /* FitToday Widget */ = {
+			isa = PBXGroup;
+			children = (
+				09B36ED61A9116A000F92610 /* TodayViewController.swift */,
+				09B36ED81A9116A000F92610 /* MainInterface.storyboard */,
+				09B36ED41A9116A000F92610 /* Supporting Files */,
+			);
+			path = "FitToday Widget";
+			sourceTree = "<group>";
+		};
+		09B36ED41A9116A000F92610 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09B36ED51A9116A000F92610 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,10 +256,12 @@
 				09A0DC581A8E4371007CA876 /* Frameworks */,
 				09A0DC591A8E4371007CA876 /* Resources */,
 				09A0DC831A8E49C3007CA876 /* Embed Frameworks */,
+				09B36EE01A9116A000F92610 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				09B36EDB1A9116A000F92610 /* PBXTargetDependency */,
 			);
 			name = FitToday;
 			productName = FitToday;
@@ -220,6 +286,23 @@
 			productReference = 09A0DC701A8E4371007CA876 /* FitTodayTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		09B36ECE1A9116A000F92610 /* FitToday Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09B36EDD1A9116A000F92610 /* Build configuration list for PBXNativeTarget "FitToday Widget" */;
+			buildPhases = (
+				09B36ECB1A9116A000F92610 /* Sources */,
+				09B36ECC1A9116A000F92610 /* Frameworks */,
+				09B36ECD1A9116A000F92610 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FitToday Widget";
+			productName = "FitToday Widget";
+			productReference = 09B36ECF1A9116A000F92610 /* FitToday Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -235,6 +318,9 @@
 					09A0DC6F1A8E4371007CA876 = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = 09A0DC5A1A8E4371007CA876;
+					};
+					09B36ECE1A9116A000F92610 = {
+						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
 			};
@@ -253,6 +339,7 @@
 			targets = (
 				09A0DC5A1A8E4371007CA876 /* FitToday */,
 				09A0DC6F1A8E4371007CA876 /* FitTodayTests */,
+				09B36ECE1A9116A000F92610 /* FitToday Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +359,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09B36ECD1A9116A000F92610 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B36ED91A9116A000F92610 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +398,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		09B36ECB1A9116A000F92610 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09B36ED71A9116A000F92610 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -310,6 +413,11 @@
 			isa = PBXTargetDependency;
 			target = 09A0DC5A1A8E4371007CA876 /* FitToday */;
 			targetProxy = 09A0DC711A8E4371007CA876 /* PBXContainerItemProxy */;
+		};
+		09B36EDB1A9116A000F92610 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09B36ECE1A9116A000F92610 /* FitToday Widget */;
+			targetProxy = 09B36EDA1A9116A000F92610 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -414,6 +522,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -429,6 +538,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -474,6 +584,30 @@
 			};
 			name = Release;
 		};
+		09B36EDE1A9116A000F92610 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FitToday Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		09B36EDF1A9116A000F92610 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "FitToday Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -503,6 +637,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		09B36EDD1A9116A000F92610 /* Build configuration list for PBXNativeTarget "FitToday Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09B36EDE1A9116A000F92610 /* Debug */,
+				09B36EDF1A9116A000F92610 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

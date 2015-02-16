@@ -11,9 +11,17 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
         
+    @IBOutlet weak var stepsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
+        
+        let tokenKeeper = OAuthTokenKeeper()
+        if let keeper = tokenKeeper {
+            println("Token: \(keeper.oauthToken())")
+            println("Token secret: \(keeper.oauthTokenSecret())")
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,6 +37,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If there's an update, use NCUpdateResult.NewData
 
         completionHandler(NCUpdateResult.NewData)
+    }
+    
+    func widgetMarginInsetsForProposedMarginInsets(defaultMarginInsets: UIEdgeInsets) -> UIEdgeInsets {
+        return UIEdgeInsetsZero
     }
     
 }

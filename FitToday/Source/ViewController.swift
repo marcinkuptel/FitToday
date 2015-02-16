@@ -11,7 +11,7 @@ import OAuthSwift
 
 class ViewController: UIViewController {
     
-    let tokenKeeper = OAuthTokenKeeper()
+    let tokenKeeper: OAuthTokenKeeper! = OAuthTokenKeeper()
     let fitBitClient: FitBitClient
     
     required init(coder aDecoder: NSCoder) {

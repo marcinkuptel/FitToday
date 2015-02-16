@@ -8,10 +8,22 @@
 
 import Foundation
 
-class OAuthTokenKeeper: NSObject {
+class OAuthTokenKeeper {
 
     private let TOKEN_KEY = "token"
     private let TOKEN_SECRET_KEY = "tokenSecret"
+    private let SUITE_NAME = "group.dk.marcinkuptel.fittoday"
+    private let defaults: NSUserDefaults!
+    
+    
+    init?() {
+        let userDefaults = NSUserDefaults(suiteName: SUITE_NAME)
+        if let unpackedDefaults = userDefaults {
+            self.defaults = unpackedDefaults
+        } else {
+            return nil
+        }
+    }
     
     /**
     Method saving token and token secret to NSUserDefaults.
@@ -21,7 +33,6 @@ class OAuthTokenKeeper: NSObject {
     */
     func saveTokenAndTokenSecret(token: String, tokenSecret: String) -> Void
     {
-        let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(token, forKey: TOKEN_KEY)
         defaults.setObject(tokenSecret, forKey: TOKEN_SECRET_KEY)
         defaults.synchronize()
@@ -29,12 +40,12 @@ class OAuthTokenKeeper: NSObject {
     
     func oauthToken() -> String?
     {
-        return NSUserDefaults.standardUserDefaults().objectForKey(TOKEN_KEY) as String?
+        return defaults.objectForKey(TOKEN_KEY) as String?
     }
     
     func oauthTokenSecret() -> String?
     {
-        return NSUserDefaults.standardUserDefaults().objectForKey(TOKEN_SECRET_KEY) as String?
+        return defaults.objectForKey(TOKEN_SECRET_KEY) as String?
     }
     
     func authorized() -> Bool

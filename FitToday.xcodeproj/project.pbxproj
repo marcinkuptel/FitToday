@@ -28,6 +28,15 @@
 		09B36ED91A9116A000F92610 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B36ED81A9116A000F92610 /* MainInterface.storyboard */; };
 		09B36EDC1A9116A000F92610 /* FitToday Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 09B36ECF1A9116A000F92610 /* FitToday Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		09DF9A8F1A9217D900E5E243 /* OAuthTokenKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093846871A8F81F3005BD244 /* OAuthTokenKeeper.swift */; };
+		09DF9A911A921E4900E5E243 /* FitBitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093846831A8F77BB005BD244 /* FitBitClient.swift */; };
+		09DF9A921A921E9D00E5E243 /* FitBitRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0938468D1A8F968A005BD244 /* FitBitRequestBuilder.swift */; };
+		09DF9A931A921EB500E5E243 /* FitBitEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0938468B1A8F93CB005BD244 /* FitBitEndpoints.swift */; };
+		09DF9A941A921EB800E5E243 /* OAuthConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093846891A8F8E02005BD244 /* OAuthConstants.swift */; };
+		09DF9A951A921ECC00E5E243 /* GetUserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B36EC91A910BE000F92610 /* GetUserInfoResponse.swift */; };
+		09DF9A961A921ECF00E5E243 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B36EC71A910BC900F92610 /* HTTPResponse.swift */; };
+		09DF9A9A1A9237A300E5E243 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093846851A8F77FD005BD244 /* HMAC.swift */; };
+		09DF9A9E1A923F9A00E5E243 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DF9A9D1A923F9A00E5E243 /* Pods.framework */; };
+		1AFDE6BB50B841E081115A9A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 163EBD0A58B742A45F4FE751 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +109,12 @@
 		09B36ED81A9116A000F92610 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		09DF9A8D1A920C7100E5E243 /* FitToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FitToday.entitlements; sourceTree = "<group>"; };
 		09DF9A8E1A920C8C00E5E243 /* FitToday Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "FitToday Widget.entitlements"; sourceTree = "<group>"; };
+		09DF9A981A92377C00E5E243 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
+		09DF9A9B1A92380900E5E243 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
+		09DF9A9D1A923F9A00E5E243 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
+		163EBD0A58B742A45F4FE751 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C754C5130810BBD89411EBD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EDEF06D5603A8B53253377BC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09A0DC811A8E49C3007CA876 /* OAuthSwift.framework in Frameworks */,
+				1AFDE6BB50B841E081115A9A /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09DF9A9E1A923F9A00E5E243 /* Pods.framework in Frameworks */,
 				09B36ED21A9116A000F92610 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +176,7 @@
 				09B36ED31A9116A000F92610 /* FitToday Widget */,
 				09B36ED01A9116A000F92610 /* Frameworks */,
 				09A0DC5C1A8E4371007CA876 /* Products */,
+				C2A5C2191313DE20B206AD90 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,7 +244,11 @@
 		09B36ED01A9116A000F92610 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09DF9A9D1A923F9A00E5E243 /* Pods.framework */,
+				09DF9A9B1A92380900E5E243 /* Pods.framework */,
+				09DF9A981A92377C00E5E243 /* Pods.framework */,
 				09B36ED11A9116A000F92610 /* NotificationCenter.framework */,
+				163EBD0A58B742A45F4FE751 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -250,6 +272,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C2A5C2191313DE20B206AD90 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C754C5130810BBD89411EBD /* Pods.debug.xcconfig */,
+				EDEF06D5603A8B53253377BC /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -257,11 +288,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09A0DC7A1A8E4371007CA876 /* Build configuration list for PBXNativeTarget "FitToday" */;
 			buildPhases = (
+				0F9C59CB167D329820B61F96 /* Check Pods Manifest.lock */,
 				09A0DC571A8E4371007CA876 /* Sources */,
 				09A0DC581A8E4371007CA876 /* Frameworks */,
 				09A0DC591A8E4371007CA876 /* Resources */,
 				09A0DC831A8E49C3007CA876 /* Embed Frameworks */,
 				09B36EE01A9116A000F92610 /* Embed App Extensions */,
+				A359A2A6DD71B3AC9D153AAE /* Copy Pods Resources */,
+				5856C53DC8031616258B10DE /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -389,6 +423,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F9C59CB167D329820B61F96 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5856C53DC8031616258B10DE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A359A2A6DD71B3AC9D153AAE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		09A0DC571A8E4371007CA876 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -419,8 +501,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09DF9A951A921ECC00E5E243 /* GetUserInfoResponse.swift in Sources */,
+				09DF9A911A921E4900E5E243 /* FitBitClient.swift in Sources */,
+				09DF9A9A1A9237A300E5E243 /* HMAC.swift in Sources */,
 				09B36ED71A9116A000F92610 /* TodayViewController.swift in Sources */,
 				09DF9A8F1A9217D900E5E243 /* OAuthTokenKeeper.swift in Sources */,
+				09DF9A961A921ECF00E5E243 /* HTTPResponse.swift in Sources */,
+				09DF9A941A921EB800E5E243 /* OAuthConstants.swift in Sources */,
+				09DF9A931A921EB500E5E243 /* FitBitEndpoints.swift in Sources */,
+				09DF9A921A921E9D00E5E243 /* FitBitRequestBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,7 +627,9 @@
 		};
 		09A0DC7B1A8E4371007CA876 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C754C5130810BBD89411EBD /* Pods.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FitToday/FitToday.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -558,7 +649,9 @@
 		};
 		09A0DC7C1A8E4371007CA876 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDEF06D5603A8B53253377BC /* Pods.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = FitToday/FitToday.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -612,10 +705,16 @@
 		};
 		09B36EDE1A9116A000F92610 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C754C5130810BBD89411EBD /* Pods.debug.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = "FitToday Widget/FitToday Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -630,10 +729,16 @@
 		};
 		09B36EDF1A9116A000F92610 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDEF06D5603A8B53253377BC /* Pods.release.xcconfig */;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = "FitToday Widget/FitToday Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "FitToday Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

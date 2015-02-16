@@ -18,10 +18,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // Do any additional setup after loading the view from its nib.
         
         let tokenKeeper = OAuthTokenKeeper()
-        if let keeper = tokenKeeper {
-            println("Token: \(keeper.oauthToken())")
-            println("Token secret: \(keeper.oauthTokenSecret())")
-        }
+        let fitBitClient = FitBitClient(tokenKeeper: tokenKeeper!)
+        fitBitClient.getUserInfo()
     }
     
     override func didReceiveMemoryWarning() {

@@ -31,7 +31,7 @@ class FitBitRequestBuilder: NSObject {
         
         let signatureBaseString = String(format: "%@&%@&%@", encodeString(httpMethod), encodeString(FitBitEndpoints.GetUserInfo.rawValue), encodeString(computeParameterString(params)))
         let signingKey = String(format: "%@&%@", encodeString(OAuthConstants.ConsumerSecret.rawValue), encodeString(tokenKeeper.oauthTokenSecret()!))
-        let signature = signatureBaseString.hmac(HMACAlgorithm.SHA1, key: signingKey)
+        let signature = signatureBaseString.hmac(key: signingKey)
         
         let format = "OAuth oauth_consumer_key=\"%@\", oauth_token=\"%@\", oauth_nonce=\"%@\", oauth_signature=\"%@\", oauth_signature_method=\"%@\", oauth_timestamp=\"%@\", oauth_version=\"%@\""
         let authHeader = String(format: format, OAuthConstants.ConsumerKey.rawValue, tokenKeeper.oauthToken()!, oauth_nonce, encodeString(signature), oauth_signature_method, oauth_timestamp, oauth_version)

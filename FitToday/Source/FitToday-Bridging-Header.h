@@ -10,5 +10,6 @@
 #define FitToday_FitToday_Bridging_Header_h
 
 #import <CommonCrypto/CommonCrypto.h>
+#import <CryptoSwift/CryptoSwift.h>
 
 #endif

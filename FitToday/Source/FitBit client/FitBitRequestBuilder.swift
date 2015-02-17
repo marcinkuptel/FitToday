@@ -12,8 +12,18 @@ class FitBitRequestBuilder: NSObject {
 
     class func getUserInfoRequest(tokenKeeper: OAuthTokenKeeper) -> NSURLRequest
     {
+        return buildRequest(tokenKeeper, endpoint: FitBitEndpoints.GetUserInfo)
+    }
+    
+    class func getActivityStatsRequest(tokenKeeper: OAuthTokenKeeper) -> NSURLRequest
+    {
+        return buildRequest(tokenKeeper, endpoint: FitBitEndpoints.GetActivityStats)
+    }
+    
+    private class func buildRequest(tokenKeeper: OAuthTokenKeeper, endpoint: FitBitEndpoints) -> NSURLRequest
+    {
         let httpMethod = "GET"
-        let url = NSURL(string: FitBitEndpoints.GetUserInfo.rawValue)
+        let url = NSURL(string: endpoint.URL())
         let oauth_signature_method = "HMAC-SHA1"
         let oauth_timestamp = NSString(format: "%i", Int(NSDate().timeIntervalSince1970))
         let oauth_nonce = NSUUID().UUIDString
@@ -29,7 +39,7 @@ class FitBitRequestBuilder: NSObject {
         ]
         
         
-        let signatureBaseString = String(format: "%@&%@&%@", encodeString(httpMethod), encodeString(FitBitEndpoints.GetUserInfo.rawValue), encodeString(computeParameterString(params)))
+        let signatureBaseString = String(format: "%@&%@&%@", encodeString(httpMethod), encodeString(endpoint.URL()), encodeString(computeParameterString(params)))
         let signingKey = String(format: "%@&%@", encodeString(OAuthConstants.ConsumerSecret.rawValue), encodeString(tokenKeeper.oauthTokenSecret()!))
         let signature = signatureBaseString.hmac(key: signingKey)
         
@@ -42,7 +52,7 @@ class FitBitRequestBuilder: NSObject {
         return request
     }
     
-    class func computeParameterString(params: [String:String]) -> String
+    private class func computeParameterString(params: [String:String]) -> String
     {
         var encodedValues: [String:String] = [String:String]()
         
@@ -65,7 +75,7 @@ class FitBitRequestBuilder: NSObject {
     }
     
     
-    class func encodeString(str: String) -> String
+    private class func encodeString(str: String) -> String
     {
         var customAllowedSet =  NSCharacterSet(charactersInString:":=\"#%/<>?@\\^`{|}&").invertedSet
         var escapedString = str.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)

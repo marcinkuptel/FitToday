@@ -16,22 +16,47 @@ class FitBitClient: NSObject {
         self.tokenKeeper = tokenKeeper
     }
     
-    func getUserInfo() -> Void
+    func getUserInfo(completion: (response: GetUserInfoResponse) -> (Void)) -> Void
     {
         let request = FitBitRequestBuilder.getUserInfoRequest(self.tokenKeeper)
         let session = NSURLSession.sharedSession()
         
-        let completion = {
+        let completionHandler = {
             (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
             let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
             if responseString != nil {
                 let responseObject = GetUserInfoResponse(response: responseString!)
-                println(responseObject?.fullName)
+                if let response = responseObject {
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        completion(response: response)
+                    })
+                }
             }
         }
         
-        var task = session.dataTaskWithRequest(request, completionHandler: completion)
+        var task = session.dataTaskWithRequest(request, completionHandler: completionHandler)
         task.resume()
     }
     
+    func getActivityStats(completion: (response: GetActivityStatsResponse) -> (Void)) -> Void
+    {
+        let request = FitBitRequestBuilder.getActivityStatsRequest(self.tokenKeeper)
+        let session = NSURLSession.sharedSession()
+        
+        let completionHandler = {
+            (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
+            let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
+            if responseString != nil {
+                let responseObject = GetActivityStatsResponse(response: responseString!)
+                if let response = responseObject {
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        completion(response: response)
+                    })
+                }
+            }
+        }
+        
+        var task = session.dataTaskWithRequest(request, completionHandler: completionHandler)
+        task.resume()
+    }
 }

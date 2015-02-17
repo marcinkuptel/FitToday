@@ -45,7 +45,9 @@ class ViewController: UIViewController {
             oauthswift.authorizeWithCallbackURL(NSURL(string: "oauth-swift://oauth-callback/fitbit")!,
                 success: success, failure: failure)
         } else {
-            self.fitBitClient.getUserInfo()
+            self.fitBitClient.getUserInfo({ (response) -> (Void) in
+                println("\(response.fullName!)")
+            })
         }
     }
 

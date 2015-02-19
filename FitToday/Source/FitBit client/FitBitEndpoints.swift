@@ -14,6 +14,7 @@ enum FitBitEndpoints {
     
     case GetUserInfo
     case GetActivityStats
+    case GetTimeSeries
     
     func URL() -> String {
         switch self {
@@ -21,6 +22,8 @@ enum FitBitEndpoints {
             return FitBitEndpoints.baseURL + "/1/user/-/profile.json"
         case .GetActivityStats:
             return FitBitEndpoints.baseURL + "/1/user/-/activities.json"
+        case .GetTimeSeries:
+            return FitBitEndpoints.baseURL + "/1/user/-/activities/steps/date/today/1d.json"
         }
     }
 }

@@ -59,4 +59,26 @@ class FitBitClient: NSObject {
         var task = session.dataTaskWithRequest(request, completionHandler: completionHandler)
         task.resume()
     }
+    
+    func getTimeSeries(completion: (response: GetTimeSeriesResponse) -> (Void)) -> Void
+    {
+        let request = FitBitRequestBuilder.getTimeSeriesRequest(self.tokenKeeper)
+        let session = NSURLSession.sharedSession()
+        
+        let completionHandler = {
+            (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
+            let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
+            if responseString != nil {
+                let responseObject = GetTimeSeriesResponse(response: responseString!)
+                if let response = responseObject {
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        completion(response: response)
+                    })
+                }
+            }
+        }
+        
+        var task = session.dataTaskWithRequest(request, completionHandler: completionHandler)
+        task.resume()
+    }
 }

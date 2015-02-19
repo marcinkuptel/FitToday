@@ -46,7 +46,7 @@ class ViewController: UIViewController {
                 success: success, failure: failure)
         } else {
             self.fitBitClient.getUserInfo({ (response) -> (Void) in
-                println("\(response.fullName!)")
+                println("\(response.fullName?)")
             })
         }
     }

@@ -38,7 +38,7 @@ class FitBitClient: NSObject {
         task.resume()
     }
     
-    func getActivityStats(completion: (response: GetActivityStatsResponse) -> (Void)) -> Void
+    func getActivityStats(completion: (response: GetActivityStatsResponse, error: NSError?) -> (Void)) -> Void
     {
         let request = FitBitRequestBuilder.getActivityStatsRequest(self.tokenKeeper)
         let session = NSURLSession.sharedSession()
@@ -50,7 +50,7 @@ class FitBitClient: NSObject {
                 let responseObject = GetActivityStatsResponse(response: responseString!)
                 if let response = responseObject {
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        completion(response: response)
+                        completion(response: response, error: nil)
                     })
                 }
             }
@@ -60,21 +60,38 @@ class FitBitClient: NSObject {
         task.resume()
     }
     
-    func getTimeSeries(completion: (response: GetTimeSeriesResponse) -> (Void)) -> Void
+    /**
+    This method contacts the FitBit server and retrieves the number of steps the user has taken.
+    
+    :param: completion Block called when a response has been received.
+    */
+    func getTimeSeries(completion: (response: GetTimeSeriesResponse?, error: NSError?) -> (Void)) -> Void
     {
         let request = FitBitRequestBuilder.getTimeSeriesRequest(self.tokenKeeper)
         let session = NSURLSession.sharedSession()
         
         let completionHandler = {
             (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
-            let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
-            if responseString != nil {
-                let responseObject = GetTimeSeriesResponse(response: responseString!)
-                if let response = responseObject {
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        completion(response: response)
-                    })
+            
+            if (error != nil) {
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    completion(response: nil, error: error)
+                })
+            } else {
+                let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
+                if responseString != nil {
+                    let responseObject = GetTimeSeriesResponse(response: responseString!)
+                    if let response = responseObject {
+                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                            completion(response: response, error: nil)
+                        })
+                        return
+                    }
                 }
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    completion(response: nil, error: nil)
+                })
             }
         }
         

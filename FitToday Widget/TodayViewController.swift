@@ -19,13 +19,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         let tokenKeeper = OAuthTokenKeeper()
         let fitBitClient = FitBitClient(tokenKeeper: tokenKeeper!)
-        fitBitClient.getUserInfo { (response) -> (Void) in
-            println("\(response.fullName!)")
-            self.stepsLabel.text = response.fullName!
-        }
+//        fitBitClient.getUserInfo { (response) -> (Void) in
+//            println("\(response.fullName!)")
+//            self.stepsLabel.text = response.fullName!
+//        }
 //        fitBitClient.getActivityStats { (response) -> (Void) in
 //            self.stepsLabel.text = String(format: "%i", response.steps!)
 //        }
+        
+        fitBitClient.getTimeSeries { (response) -> (Void) in
+            self.stepsLabel.text = String(format: "Steps today: %@", response.steps!)
+        }
     }
     
     override func didReceiveMemoryWarning() {

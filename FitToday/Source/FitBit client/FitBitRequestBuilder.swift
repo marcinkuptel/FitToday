@@ -20,6 +20,11 @@ class FitBitRequestBuilder: NSObject {
         return buildRequest(tokenKeeper, endpoint: FitBitEndpoints.GetActivityStats)
     }
     
+    class func getTimeSeriesRequest(tokenKeeper: OAuthTokenKeeper) -> NSURLRequest
+    {
+        return buildRequest(tokenKeeper, endpoint: FitBitEndpoints.GetTimeSeries)
+    }
+    
     private class func buildRequest(tokenKeeper: OAuthTokenKeeper, endpoint: FitBitEndpoints) -> NSURLRequest
     {
         let httpMethod = "GET"
@@ -43,7 +48,7 @@ class FitBitRequestBuilder: NSObject {
         let signingKey = String(format: "%@&%@", encodeString(OAuthConstants.ConsumerSecret.rawValue), encodeString(tokenKeeper.oauthTokenSecret()!))
         let signature = signatureBaseString.hmac(key: signingKey)
         
-        let format = "OAuth oauth_consumer_key=\"%@\", oauth_token=\"%@\", oauth_nonce=\"%@\", oauth_signature=\"%@\", oauth_signature_method=\"%@\", oauth_timestamp=\"%@\", oauth_version=\"%@\""
+        let format = "OAuth realm=\"\", oauth_consumer_key=\"%@\", oauth_token=\"%@\", oauth_nonce=\"%@\", oauth_signature=\"%@\", oauth_signature_method=\"%@\", oauth_timestamp=\"%@\", oauth_version=\"%@\""
         let authHeader = String(format: format, OAuthConstants.ConsumerKey.rawValue, tokenKeeper.oauthToken()!, oauth_nonce, encodeString(signature), oauth_signature_method, oauth_timestamp, oauth_version)
         
         var request = NSMutableURLRequest(URL: url!)
@@ -77,7 +82,7 @@ class FitBitRequestBuilder: NSObject {
     
     private class func encodeString(str: String) -> String
     {
-        var customAllowedSet =  NSCharacterSet(charactersInString:":=\"#%/<>?@\\^`{|}&").invertedSet
+        var customAllowedSet =  NSCharacterSet(charactersInString:":\"=#%/<>?@\\^`{|}&+").invertedSet
         var escapedString = str.stringByAddingPercentEncodingWithAllowedCharacters(customAllowedSet)
         return escapedString!
     }

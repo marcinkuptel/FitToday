@@ -29,6 +29,8 @@
 		09B36EDC1A9116A000F92610 /* FitToday Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 09B36ECF1A9116A000F92610 /* FitToday Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		09BF52DA1A93D57000516B97 /* GetActivityStatsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF52D91A93D57000516B97 /* GetActivityStatsResponse.swift */; };
 		09BF52DB1A93DBB600516B97 /* GetActivityStatsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF52D91A93D57000516B97 /* GetActivityStatsResponse.swift */; };
+		09D24E7F1A9649500061AF1A /* GetTimeSeriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D24E7E1A9649500061AF1A /* GetTimeSeriesResponse.swift */; };
+		09D24E801A964A830061AF1A /* GetTimeSeriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D24E7E1A9649500061AF1A /* GetTimeSeriesResponse.swift */; };
 		09DF9A8F1A9217D900E5E243 /* OAuthTokenKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093846871A8F81F3005BD244 /* OAuthTokenKeeper.swift */; };
 		09DF9A911A921E4900E5E243 /* FitBitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093846831A8F77BB005BD244 /* FitBitClient.swift */; };
 		09DF9A921A921E9D00E5E243 /* FitBitRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0938468D1A8F968A005BD244 /* FitBitRequestBuilder.swift */; };
@@ -110,6 +112,7 @@
 		09B36ED61A9116A000F92610 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		09B36ED81A9116A000F92610 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		09BF52D91A93D57000516B97 /* GetActivityStatsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetActivityStatsResponse.swift; path = "Source/FitBit client/HTTP responses/GetActivityStatsResponse.swift"; sourceTree = "<group>"; };
+		09D24E7E1A9649500061AF1A /* GetTimeSeriesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetTimeSeriesResponse.swift; path = "Source/FitBit client/HTTP responses/GetTimeSeriesResponse.swift"; sourceTree = "<group>"; };
 		09DF9A8D1A920C7100E5E243 /* FitToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FitToday.entitlements; sourceTree = "<group>"; };
 		09DF9A8E1A920C8C00E5E243 /* FitToday Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "FitToday Widget.entitlements"; sourceTree = "<group>"; };
 		09DF9A981A92377C00E5E243 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
@@ -241,6 +244,7 @@
 				09B36EC71A910BC900F92610 /* HTTPResponse.swift */,
 				09B36EC91A910BE000F92610 /* GetUserInfoResponse.swift */,
 				09BF52D91A93D57000516B97 /* GetActivityStatsResponse.swift */,
+				09D24E7E1A9649500061AF1A /* GetTimeSeriesResponse.swift */,
 			);
 			name = "HTTP responses";
 			sourceTree = "<group>";
@@ -487,6 +491,7 @@
 				0938468C1A8F93CB005BD244 /* FitBitEndpoints.swift in Sources */,
 				093846861A8F77FD005BD244 /* HMAC.swift in Sources */,
 				09B36ECA1A910BE000F92610 /* GetUserInfoResponse.swift in Sources */,
+				09D24E7F1A9649500061AF1A /* GetTimeSeriesResponse.swift in Sources */,
 				09BF52DA1A93D57000516B97 /* GetActivityStatsResponse.swift in Sources */,
 				09B36EC81A910BC900F92610 /* HTTPResponse.swift in Sources */,
 				09A0DC611A8E4371007CA876 /* AppDelegate.swift in Sources */,
@@ -515,6 +520,7 @@
 				09DF9A961A921ECF00E5E243 /* HTTPResponse.swift in Sources */,
 				09DF9A941A921EB800E5E243 /* OAuthConstants.swift in Sources */,
 				09DF9A931A921EB500E5E243 /* FitBitEndpoints.swift in Sources */,
+				09D24E801A964A830061AF1A /* GetTimeSeriesResponse.swift in Sources */,
 				09DF9A921A921E9D00E5E243 /* FitBitRequestBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,7 +22,7 @@ class FitBitRequestBuilder: NSObject {
     
     class func getTimeSeriesRequest(tokenKeeper: OAuthTokenKeeper) -> NSURLRequest
     {
-        return buildRequest(tokenKeeper, endpoint: FitBitEndpoints.GetTimeSeries)
+        return buildRequest(tokenKeeper, endpoint: FitBitEndpoints.GetTimeSeries("today", "1d"))
     }
     
     private class func buildRequest(tokenKeeper: OAuthTokenKeeper, endpoint: FitBitEndpoints) -> NSURLRequest

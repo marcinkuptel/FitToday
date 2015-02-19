@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.3k/10k" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIc-ln-YYN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIc-ln-YYN">
                                 <rect key="frame" x="16" y="8" width="288" height="74"/>
-                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="dkL-Or-1bi"/>
                                 </constraints>
@@ -29,9 +28,9 @@
                             </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="pIc-ln-YYN" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="4b1-LP-Gfr"/>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="pIc-ln-YYN" secondAttribute="bottom" constant="8" id="5cQ-wL-Oqk"/>
-                            <constraint firstItem="pIc-ln-YYN" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="JSm-p5-E0i"/>
-                            <constraint firstItem="pIc-ln-YYN" firstAttribute="trailing" secondItem="S3S-Oj-5AN" secondAttribute="trailingMargin" id="iRU-bh-Jxa"/>
+                            <constraint firstItem="pIc-ln-YYN" firstAttribute="trailing" secondItem="S3S-Oj-5AN" secondAttribute="trailingMargin" id="gZm-7F-CkK"/>
                             <constraint firstItem="pIc-ln-YYN" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="scG-Wk-iKq"/>
                         </constraints>
                     </view>

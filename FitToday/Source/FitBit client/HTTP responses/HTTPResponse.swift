@@ -10,7 +10,7 @@ import Foundation
 
 class HTTPResponse: NSObject {
 
-    private var response: String = ""
+    private(set) var response: String = ""
     var dictionary: [String:AnyObject]?
     
     convenience init?(response: String)

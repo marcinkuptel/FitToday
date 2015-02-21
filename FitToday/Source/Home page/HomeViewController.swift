@@ -10,27 +10,20 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    let homeCoordinator: HomePageCoordinator?
+    let state: (view:UIView, coordinator:HomePageCoordinator)
     
     required init(coder aDecoder: NSCoder)
     {
-        self.homeCoordinator = HomePageCoordinatorFactory.homePageCoordinator()
+        let builder = HomePageViewBuilderFactory.homePageViewBuilder()!
+        self.state = builder.buildViewAndCoordinator()
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let coordinator = self.homeCoordinator
-        {
-            coordinator.authorizeIfNeeded({ (success, error) -> (Void) in
-                if success {
-                    println(">>> App authorized")
-                } else {
-                    println(">>> Authorization failed: \(error)")
-                }
-            })
-        }
+        self.state.view.frame = self.view.bounds
+        self.view.addSubview(self.state.view)
     }
 
     override func didReceiveMemoryWarning() {

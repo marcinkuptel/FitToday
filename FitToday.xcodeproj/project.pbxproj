@@ -28,7 +28,12 @@
 		09B36EDC1A9116A000F92610 /* FitToday Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 09B36ECF1A9116A000F92610 /* FitToday Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		09B971541A98DFC200C29C3C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B971531A98DFC200C29C3C /* HomeViewController.swift */; };
 		09B971561A98E03000C29C3C /* HomePageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B971551A98E03000C29C3C /* HomePageCoordinator.swift */; };
-		09B971581A98E30A00C29C3C /* HomePageCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B971571A98E30A00C29C3C /* HomePageCoordinatorFactory.swift */; };
+		09B9715A1A98FBB600C29C3C /* HomePageViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B971591A98FBB600C29C3C /* HomePageViewBuilder.swift */; };
+		09B9715E1A99008100C29C3C /* HomePageAuthorizedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9715D1A99008100C29C3C /* HomePageAuthorizedCoordinator.swift */; };
+		09B971601A99009400C29C3C /* HomePageUnauthorizedCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B9715F1A99009400C29C3C /* HomePageUnauthorizedCoordinator.swift */; };
+		09B971621A992BA200C29C3C /* HomePageUnauthorizedBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B971611A992BA200C29C3C /* HomePageUnauthorizedBuilder.swift */; };
+		09B971641A992BB600C29C3C /* HomePageAuthorizedBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B971631A992BB600C29C3C /* HomePageAuthorizedBuilder.swift */; };
+		09B971661A992C1700C29C3C /* HomePageViewBuilderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B971651A992C1700C29C3C /* HomePageViewBuilderFactory.swift */; };
 		09BF52DA1A93D57000516B97 /* GetActivityStatsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF52D91A93D57000516B97 /* GetActivityStatsResponse.swift */; };
 		09BF52DB1A93DBB600516B97 /* GetActivityStatsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF52D91A93D57000516B97 /* GetActivityStatsResponse.swift */; };
 		09D24E7F1A9649500061AF1A /* GetTimeSeriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D24E7E1A9649500061AF1A /* GetTimeSeriesResponse.swift */; };
@@ -114,7 +119,12 @@
 		09B36ED81A9116A000F92610 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		09B971531A98DFC200C29C3C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "Source/Home page/HomeViewController.swift"; sourceTree = "<group>"; };
 		09B971551A98E03000C29C3C /* HomePageCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageCoordinator.swift; path = "Source/Home page/HomePageCoordinator.swift"; sourceTree = "<group>"; };
-		09B971571A98E30A00C29C3C /* HomePageCoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageCoordinatorFactory.swift; path = "Source/Home page/HomePageCoordinatorFactory.swift"; sourceTree = "<group>"; };
+		09B971591A98FBB600C29C3C /* HomePageViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageViewBuilder.swift; path = "Source/Home page/HomePageViewBuilder.swift"; sourceTree = "<group>"; };
+		09B9715D1A99008100C29C3C /* HomePageAuthorizedCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageAuthorizedCoordinator.swift; path = "Source/Home page/Authorized/HomePageAuthorizedCoordinator.swift"; sourceTree = "<group>"; };
+		09B9715F1A99009400C29C3C /* HomePageUnauthorizedCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageUnauthorizedCoordinator.swift; path = "Source/Home page/Unauthorized/HomePageUnauthorizedCoordinator.swift"; sourceTree = "<group>"; };
+		09B971611A992BA200C29C3C /* HomePageUnauthorizedBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageUnauthorizedBuilder.swift; path = "Source/Home page/Unauthorized/HomePageUnauthorizedBuilder.swift"; sourceTree = "<group>"; };
+		09B971631A992BB600C29C3C /* HomePageAuthorizedBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageAuthorizedBuilder.swift; path = "Source/Home page/Authorized/HomePageAuthorizedBuilder.swift"; sourceTree = "<group>"; };
+		09B971651A992C1700C29C3C /* HomePageViewBuilderFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageViewBuilderFactory.swift; path = "Source/Home page/HomePageViewBuilderFactory.swift"; sourceTree = "<group>"; };
 		09BF52D91A93D57000516B97 /* GetActivityStatsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetActivityStatsResponse.swift; path = "Source/FitBit client/HTTP responses/GetActivityStatsResponse.swift"; sourceTree = "<group>"; };
 		09D24E7E1A9649500061AF1A /* GetTimeSeriesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetTimeSeriesResponse.swift; path = "Source/FitBit client/HTTP responses/GetTimeSeriesResponse.swift"; sourceTree = "<group>"; };
 		09DF9A8D1A920C7100E5E243 /* FitToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FitToday.entitlements; sourceTree = "<group>"; };
@@ -287,11 +297,32 @@
 		09B971521A98DFA800C29C3C /* Home page */ = {
 			isa = PBXGroup;
 			children = (
+				09B9715C1A99005B00C29C3C /* Unauthorized */,
+				09B9715B1A99005500C29C3C /* Authorized */,
 				09B971531A98DFC200C29C3C /* HomeViewController.swift */,
+				09B971591A98FBB600C29C3C /* HomePageViewBuilder.swift */,
 				09B971551A98E03000C29C3C /* HomePageCoordinator.swift */,
-				09B971571A98E30A00C29C3C /* HomePageCoordinatorFactory.swift */,
+				09B971651A992C1700C29C3C /* HomePageViewBuilderFactory.swift */,
 			);
 			name = "Home page";
+			sourceTree = "<group>";
+		};
+		09B9715B1A99005500C29C3C /* Authorized */ = {
+			isa = PBXGroup;
+			children = (
+				09B9715D1A99008100C29C3C /* HomePageAuthorizedCoordinator.swift */,
+				09B971631A992BB600C29C3C /* HomePageAuthorizedBuilder.swift */,
+			);
+			name = Authorized;
+			sourceTree = "<group>";
+		};
+		09B9715C1A99005B00C29C3C /* Unauthorized */ = {
+			isa = PBXGroup;
+			children = (
+				09B9715F1A99009400C29C3C /* HomePageUnauthorizedCoordinator.swift */,
+				09B971611A992BA200C29C3C /* HomePageUnauthorizedBuilder.swift */,
+			);
+			name = Unauthorized;
 			sourceTree = "<group>";
 		};
 		C2A5C2191313DE20B206AD90 /* Pods */ = {
@@ -498,20 +529,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09B9715A1A98FBB600C29C3C /* HomePageViewBuilder.swift in Sources */,
+				09B971601A99009400C29C3C /* HomePageUnauthorizedCoordinator.swift in Sources */,
 				093846841A8F77BB005BD244 /* FitBitClient.swift in Sources */,
 				093846881A8F81F3005BD244 /* OAuthTokenKeeper.swift in Sources */,
 				09B971561A98E03000C29C3C /* HomePageCoordinator.swift in Sources */,
 				0938468A1A8F8E02005BD244 /* OAuthConstants.swift in Sources */,
 				0938468C1A8F93CB005BD244 /* FitBitEndpoints.swift in Sources */,
 				093846861A8F77FD005BD244 /* HMAC.swift in Sources */,
-				09B971581A98E30A00C29C3C /* HomePageCoordinatorFactory.swift in Sources */,
 				09B36ECA1A910BE000F92610 /* GetUserInfoResponse.swift in Sources */,
 				09D24E7F1A9649500061AF1A /* GetTimeSeriesResponse.swift in Sources */,
+				09B971641A992BB600C29C3C /* HomePageAuthorizedBuilder.swift in Sources */,
+				09B971661A992C1700C29C3C /* HomePageViewBuilderFactory.swift in Sources */,
 				09BF52DA1A93D57000516B97 /* GetActivityStatsResponse.swift in Sources */,
+				09B971621A992BA200C29C3C /* HomePageUnauthorizedBuilder.swift in Sources */,
 				09B36EC81A910BC900F92610 /* HTTPResponse.swift in Sources */,
 				09A0DC611A8E4371007CA876 /* AppDelegate.swift in Sources */,
 				0938468E1A8F968A005BD244 /* FitBitRequestBuilder.swift in Sources */,
 				09B971541A98DFC200C29C3C /* HomeViewController.swift in Sources */,
+				09B9715E1A99008100C29C3C /* HomePageAuthorizedCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

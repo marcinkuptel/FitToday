@@ -1,5 +1,5 @@
 //
-//  HomePageCoordinator.swift
+//  HomePageViewBuilder.swift
 //  FitToday
 //
 //  Created by Marcin Kuptel on 21/02/15.
@@ -8,6 +8,7 @@
 
 import Foundation
 
-protocol HomePageCoordinator
+protocol HomePageViewBuilder
 {
+    func buildViewAndCoordinator() -> (UIView, HomePageCoordinator)
 }

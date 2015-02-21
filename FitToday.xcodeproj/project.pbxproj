@@ -14,7 +14,6 @@
 		0938468C1A8F93CB005BD244 /* FitBitEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0938468B1A8F93CB005BD244 /* FitBitEndpoints.swift */; };
 		0938468E1A8F968A005BD244 /* FitBitRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0938468D1A8F968A005BD244 /* FitBitRequestBuilder.swift */; };
 		09A0DC611A8E4371007CA876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A0DC601A8E4371007CA876 /* AppDelegate.swift */; };
-		09A0DC631A8E4371007CA876 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A0DC621A8E4371007CA876 /* ViewController.swift */; };
 		09A0DC661A8E4371007CA876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09A0DC641A8E4371007CA876 /* Main.storyboard */; };
 		09A0DC681A8E4371007CA876 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09A0DC671A8E4371007CA876 /* Images.xcassets */; };
 		09A0DC6B1A8E4371007CA876 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09A0DC691A8E4371007CA876 /* LaunchScreen.xib */; };
@@ -27,6 +26,9 @@
 		09B36ED71A9116A000F92610 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B36ED61A9116A000F92610 /* TodayViewController.swift */; };
 		09B36ED91A9116A000F92610 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09B36ED81A9116A000F92610 /* MainInterface.storyboard */; };
 		09B36EDC1A9116A000F92610 /* FitToday Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 09B36ECF1A9116A000F92610 /* FitToday Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		09B971541A98DFC200C29C3C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B971531A98DFC200C29C3C /* HomeViewController.swift */; };
+		09B971561A98E03000C29C3C /* HomePageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B971551A98E03000C29C3C /* HomePageCoordinator.swift */; };
+		09B971581A98E30A00C29C3C /* HomePageCoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B971571A98E30A00C29C3C /* HomePageCoordinatorFactory.swift */; };
 		09BF52DA1A93D57000516B97 /* GetActivityStatsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF52D91A93D57000516B97 /* GetActivityStatsResponse.swift */; };
 		09BF52DB1A93DBB600516B97 /* GetActivityStatsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BF52D91A93D57000516B97 /* GetActivityStatsResponse.swift */; };
 		09D24E7F1A9649500061AF1A /* GetTimeSeriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D24E7E1A9649500061AF1A /* GetTimeSeriesResponse.swift */; };
@@ -96,7 +98,6 @@
 		09A0DC5B1A8E4371007CA876 /* FitToday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitToday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09A0DC5F1A8E4371007CA876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09A0DC601A8E4371007CA876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Source/AppDelegate.swift; sourceTree = "<group>"; };
-		09A0DC621A8E4371007CA876 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Source/ViewController.swift; sourceTree = "<group>"; };
 		09A0DC651A8E4371007CA876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09A0DC671A8E4371007CA876 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		09A0DC6A1A8E4371007CA876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -111,6 +112,9 @@
 		09B36ED51A9116A000F92610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09B36ED61A9116A000F92610 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		09B36ED81A9116A000F92610 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		09B971531A98DFC200C29C3C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = "Source/Home page/HomeViewController.swift"; sourceTree = "<group>"; };
+		09B971551A98E03000C29C3C /* HomePageCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageCoordinator.swift; path = "Source/Home page/HomePageCoordinator.swift"; sourceTree = "<group>"; };
+		09B971571A98E30A00C29C3C /* HomePageCoordinatorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomePageCoordinatorFactory.swift; path = "Source/Home page/HomePageCoordinatorFactory.swift"; sourceTree = "<group>"; };
 		09BF52D91A93D57000516B97 /* GetActivityStatsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetActivityStatsResponse.swift; path = "Source/FitBit client/HTTP responses/GetActivityStatsResponse.swift"; sourceTree = "<group>"; };
 		09D24E7E1A9649500061AF1A /* GetTimeSeriesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetTimeSeriesResponse.swift; path = "Source/FitBit client/HTTP responses/GetTimeSeriesResponse.swift"; sourceTree = "<group>"; };
 		09DF9A8D1A920C7100E5E243 /* FitToday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FitToday.entitlements; sourceTree = "<group>"; };
@@ -199,12 +203,12 @@
 		09A0DC5D1A8E4371007CA876 /* FitToday */ = {
 			isa = PBXGroup;
 			children = (
-				09DF9A8D1A920C7100E5E243 /* FitToday.entitlements */,
+				09B971521A98DFA800C29C3C /* Home page */,
 				093846821A8F772D005BD244 /* FitBit client */,
 				093846811A8F7654005BD244 /* Frameworks */,
 				09A0DC601A8E4371007CA876 /* AppDelegate.swift */,
 				098F96F41A8E768400421655 /* FitToday-Bridging-Header.h */,
-				09A0DC621A8E4371007CA876 /* ViewController.swift */,
+				09DF9A8D1A920C7100E5E243 /* FitToday.entitlements */,
 				09A0DC641A8E4371007CA876 /* Main.storyboard */,
 				09A0DC671A8E4371007CA876 /* Images.xcassets */,
 				09A0DC691A8E4371007CA876 /* LaunchScreen.xib */,
@@ -278,6 +282,16 @@
 				09B36ED51A9116A000F92610 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09B971521A98DFA800C29C3C /* Home page */ = {
+			isa = PBXGroup;
+			children = (
+				09B971531A98DFC200C29C3C /* HomeViewController.swift */,
+				09B971551A98E03000C29C3C /* HomePageCoordinator.swift */,
+				09B971571A98E30A00C29C3C /* HomePageCoordinatorFactory.swift */,
+			);
+			name = "Home page";
 			sourceTree = "<group>";
 		};
 		C2A5C2191313DE20B206AD90 /* Pods */ = {
@@ -485,17 +499,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				093846841A8F77BB005BD244 /* FitBitClient.swift in Sources */,
-				09A0DC631A8E4371007CA876 /* ViewController.swift in Sources */,
 				093846881A8F81F3005BD244 /* OAuthTokenKeeper.swift in Sources */,
+				09B971561A98E03000C29C3C /* HomePageCoordinator.swift in Sources */,
 				0938468A1A8F8E02005BD244 /* OAuthConstants.swift in Sources */,
 				0938468C1A8F93CB005BD244 /* FitBitEndpoints.swift in Sources */,
 				093846861A8F77FD005BD244 /* HMAC.swift in Sources */,
+				09B971581A98E30A00C29C3C /* HomePageCoordinatorFactory.swift in Sources */,
 				09B36ECA1A910BE000F92610 /* GetUserInfoResponse.swift in Sources */,
 				09D24E7F1A9649500061AF1A /* GetTimeSeriesResponse.swift in Sources */,
 				09BF52DA1A93D57000516B97 /* GetActivityStatsResponse.swift in Sources */,
 				09B36EC81A910BC900F92610 /* HTTPResponse.swift in Sources */,
 				09A0DC611A8E4371007CA876 /* AppDelegate.swift in Sources */,
 				0938468E1A8F968A005BD244 /* FitBitRequestBuilder.swift in Sources */,
+				09B971541A98DFC200C29C3C /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

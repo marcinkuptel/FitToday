@@ -1,29 +1,38 @@
 //
-//  ViewController.swift
+//  HomePageCoordinator.swift
 //  FitToday
 //
-//  Created by Marcin Kuptel on 13/02/15.
+//  Created by Marcin Kuptel on 21/02/15.
 //  Copyright (c) 2015 Marcin Kuptel. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import OAuthSwift
 
-class ViewController: UIViewController {
-    
-    let tokenKeeper: OAuthTokenKeeper! = OAuthTokenKeeper()
+class HomePageCoordinator: NSObject {
+
+    let tokenKeeper: OAuthTokenKeeper
     let fitBitClient: FitBitClient
-    
-    required init(coder aDecoder: NSCoder) {
-        self.fitBitClient = FitBitClient(tokenKeeper: self.tokenKeeper)
-        super.init(coder: aDecoder)
+ 
+    init(tokenKeeper: OAuthTokenKeeper, fitBitClient: FitBitClient)
+    {
+        self.fitBitClient = fitBitClient
+        self.tokenKeeper = tokenKeeper
+        super.init()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if !self.tokenKeeper.authorized() {
-
+    //MARK: Authorization
+    
+    /**
+    This method performs authrization with the fitbit server. If successful,
+    OAuth token and token secret are received.
+    
+    :param: Completion block informing the caller whether authorization was successful.
+    */
+    func authorizeIfNeeded(completion: (success: Bool, error: NSError?) -> (Void)) -> Void
+    {
+        if !self.tokenKeeper.authorized()
+        {
             let oauthswift = OAuth1Swift(
                 consumerKey:        OAuthConstants.ConsumerKey.rawValue,
                 consumerSecret:     OAuthConstants.ConsumerSecret.rawValue,
@@ -34,28 +43,21 @@ class ViewController: UIViewController {
             
             let failure = {
                 (error: NSError) -> Void in
-                println("Authorization failed: \(error)")
+                completion(success: false, error: error)
             }
             
             let success = {
-                (credential: OAuthSwiftCredential, response: NSURLResponse) in
+                (credential: OAuthSwiftCredential, response: NSURLResponse) -> Void in
                 self.tokenKeeper.saveTokenAndTokenSecret(credential.oauth_token, tokenSecret: credential.oauth_token_secret)
+                completion(success: true, error: nil)
             }
             
             oauthswift.authorizeWithCallbackURL(NSURL(string: "oauth-swift://oauth-callback/fitbit")!,
                 success: success, failure: failure)
+            
         } else {
-            self.fitBitClient.getUserInfo({ (response) -> (Void) in
-                println("\(response.fullName?)")
-            })
+            completion(success: true, error:nil)
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
-

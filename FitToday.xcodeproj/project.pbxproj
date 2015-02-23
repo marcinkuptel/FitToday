@@ -134,6 +134,7 @@
 		09DF9A9D1A923F9A00E5E243 /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/build/Debug-iphoneos/Pods.framework"; sourceTree = "<group>"; };
 		163EBD0A58B742A45F4FE751 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C754C5130810BBD89411EBD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DFFB46D87446CCE90B56A6BD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDEF06D5603A8B53253377BC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -271,6 +272,7 @@
 				09DF9A981A92377C00E5E243 /* Pods.framework */,
 				09B36ED11A9116A000F92610 /* NotificationCenter.framework */,
 				163EBD0A58B742A45F4FE751 /* Pods.framework */,
+				DFFB46D87446CCE90B56A6BD /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
